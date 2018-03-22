@@ -135,6 +135,7 @@ ul {
 
 .carousel__items {
   width: 300vw;
+  height: 800px;
 }
 
 .carousel__item {
