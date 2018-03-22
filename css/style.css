@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "Nanami-Bold";
+  src: url("../fonts/Nanami-Bold.eot") format("OpenType");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nanami-Bold";
+  src: url("../fonts/Nanami-Bold.ttf") format("TrueType");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nanami-Light";
+  src: url("../fonts/Nanami-Light.eot") format("OpenType");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nanami-Light";
+  src: url("../fonts/Nanami-Light.ttf") format("TrueType");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nanami-Book";
+  src: url("../fonts/Nanami-Book.eot") format("OpenType");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nanami-Book";
+  src: url("../fonts/Nanami-Book.ttf") format("TrueType");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "master_of_break";
+  src: url("../fonts/master_of_break.eot") format("OpenType");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "master_of_break";
+  src: url("../fonts/master_of_break.ttf") format("TrueType");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Ci=olors */
+/* Mixins */
+/* general & typography */
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.header__title,
+.shop__title {
+  font-family: 'master_of_break';
+  font-size: 8em;
+  color: #ed2024;
+  text-transform: none;
+  text-shadow: 4px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+  text-align: center;
+}
+
+/* Nav */
+.nav {
+  background-color: #fff;
+}
+
+.nav__wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.nav__menu {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  padding-top: 30px;
+}
+
+.nav__item {
+  margin: 0 20px;
+}
+
+.nav__link {
+  font-family: 'Nanami-Book';
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.nav__link:hover {
+  position: relative;
+  top: -3px;
+  background-color: #fff581;
+  background-image: linear-gradient(transparent 10px, #fff581 10px);
+  border-bottom: 18px solid #fff581;
+}
+
+.carousel {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel__items {
+  width: 300vw;
+}
+
+.carousel__item {
+  list-style-type: none;
+  float: left;
+  width: 100vw;
+  height: 800px;
+  background-image: url(../images/bg_header.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 80px;
+  cursor: pointer;
+}
+
+.carousel__arrow--left {
+  left: 10%;
+}
+
+.carousel__arrow--right {
+  right: 10%;
+}
+
+.header__text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+}
+
+.header__greeting {
+  font-size: 2.5em;
+  font-family: "Nanami-Book";
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  padding-top: 60px;
+}
+/*# sourceMappingURL=style.css.map */
