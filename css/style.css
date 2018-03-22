@@ -71,17 +71,30 @@ ul {
   padding: 0;
 }
 
-.header__title,
-.shop__title {
-  font-family: 'master_of_break';
-  font-size: 8em;
-  color: #ed2024;
-  text-transform: none;
-  text-shadow: 4px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+.button {
+  font-family: 'Nanami-Book';
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.6rem;
+  line-height: 35px;
+  cursor: pointer;
   text-align: center;
+  display: block;
+  width: 245px;
+  height: 60px;
+  border: none;
 }
 
 /* Nav */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .nav {
   background-color: #fff;
 }
@@ -172,13 +185,112 @@ ul {
   top: 20%;
 }
 
+.header__title {
+  font-family: "master_of_break";
+  font-size: 8em;
+  color: #ed2024;
+  text-transform: none;
+  text-shadow: 4px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+  text-align: center;
+}
+
 .header__greeting {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   font-family: "Nanami-Book";
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
   padding-top: 60px;
+}
+
+.reservation {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 150px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.reservation__title {
+  font-family: "Nanami-Book";
+  color: #f01b16;
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
+.reservation__title--decorate {
+  font-family: "master_of_break";
+  letter-spacing: 1.74px;
+}
+
+.reservation__text {
+  font-family: "Nanami-Book";
+  font-size: 2.2em;
+  color: #9f9a97;
+  line-height: 1.2;
+  padding: 0 60px 30px;
+  text-align: center;
+}
+
+.reservation__button {
+  color: #fff;
+  background-color: #ff7e66;
+}
+
+.cooking {
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff2ed;
+  min-height: 750px;
+}
+
+.cooking__image {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background: url("../images/recipe.jpg") no-repeat;
+  background-size: cover;
+  height: 750px;
+}
+
+.cooking__content {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.cooking__text {
+  font-family: "Nanami-Book";
+  font-size: 2.2em;
+  color: #9f9a97;
+  line-height: 1.2;
+  padding: 0 60px 30px;
+  text-align: center;
+}
+
+.cooking__title {
+  font-size: 4.5rem;
+  font-family: "Nanami-Bold";
+  color: #ff7e66;
+  line-height: 1.2;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

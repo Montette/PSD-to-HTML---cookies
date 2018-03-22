@@ -12,7 +12,7 @@ $(function () {
 
         carouselList.animate({
             'margin-left':'-100vw'
-        }, 800, moveFirstSlide);
+        }, 1000, moveFirstSlide);
 
     };
     
@@ -25,7 +25,7 @@ $(function () {
             firstItem.before(lastItem);
             carouselList.animate({
                 'margin-left': 0
-            }, 800);
+            }, 1000);
     }
 
     function moveFirstSlide() {

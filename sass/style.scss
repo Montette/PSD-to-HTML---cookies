@@ -58,6 +58,7 @@
 /*Ci=olors */
 
 $white: #fff;
+$orange: #ff7e66;
 
 /* Mixins */
 
@@ -73,6 +74,35 @@ $align) {
     align-items: $align;
 }
 
+@mixin decorateTitle {
+     font-family: "master_of_break";
+    font-size: 8em;
+    color: rgb(237, 32, 36);
+    text-transform: none;
+    text-shadow: 4px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    text-align: center;
+}
+
+@mixin sectionTitle {
+    font-family: "Nanami-Book";;
+    color: #f01b16;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+@mixin decorateWord {
+    font-family: "master_of_break";
+    letter-spacing: 1.74px;
+}
+
+@mixin textStyle {
+    font-family: "Nanami-Book";
+    font-size: 2.2em;
+    color: rgb(159, 154, 151);
+    line-height: 1.2;
+    padding: 0 60px 30px;
+    text-align: center;
+}
 
 /* general & typography */
 
@@ -90,16 +120,40 @@ ul {
     padding: 0;
 }
 
-.header__title,
-.shop__title {
-    font-family: 'master_of_break';
-    font-size: 8em;
-    color: rgb(237, 32, 36);
-    text-transform: none;
-    text-shadow: 4px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+.button {
+    font-family: 'Nanami-Book';
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1.6rem;
+    line-height: 35px;
+    cursor: pointer;
     text-align: center;
+    display: block;
+    width: 245px;
+    height: 60px;
+    border: none;
 }
+
+
+//.header__title,
+//.shop__title {
+//    font-family: 'master_of_break';
+//    font-size: 8em;
+//    color: rgb(237, 32, 36);
+//    text-transform: none;
+//    text-shadow: 4px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+//    text-align: center;
+//}
 /* Nav */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
 
 .nav {
     background-color: $white;
@@ -181,8 +235,11 @@ ul {
         transform: translateX(-50%);
         top: 20%;
     }
+    &__title {
+        @include decorateTitle;
+    }
     &__greeting {
-        font-size: 2.5em;
+        font-size: 2.5rem;
         font-family: "Nanami-Book";
         color: $white;
         text-transform: uppercase;
@@ -191,4 +248,64 @@ ul {
         padding-top: 60px;
     }
     
+}
+
+.reservation {
+    @include centerWrapper(1180px);
+    padding-top: 100px;
+    padding-bottom: 150px;
+    @include flexPosition(center, center);
+    flex-direction: column;
+    &__title {
+        @include sectionTitle;
+        &--decorate {
+        @include decorateWord;
+    }
+    }
+    &__text {
+        @include textStyle;
+    }
+    &__button {
+        color: $white;
+        background-color: $orange;
+    }
+    
+}
+
+.cooking {
+    display: flex;
+    background-color: #fff2ed;
+    min-height: 750px;
+    &__image{
+        flex-basis: 50%;
+         background: url('../images/recipe.jpg') no-repeat;
+        background-size: cover;
+        height: 750px;
+        
+    }
+    &__content {
+        flex-basis: 50%;
+        @include flexPosition(center, center);
+        flex-direction: column;
+        padding-left: 70px;
+        padding-right: 70px;
+        
+      
+        
+    
+        
+        
+    }
+    &__text {
+       @include textStyle;
+    }
+    &__title {
+        font-size: 4.5rem;
+        font-family: "Nanami-Bold";
+        color: $orange;
+        line-height: 1.2;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-align: center;
+    }
 }
