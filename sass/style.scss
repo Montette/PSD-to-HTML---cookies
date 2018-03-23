@@ -97,7 +97,7 @@ $align) {
 
 @mixin textStyle {
     font-family: "Nanami-Book";
-    font-size: 2.2em;
+    font-size: 2.2rem;
     color: rgb(159, 154, 151);
     line-height: 1.2;
     padding: 0 60px 30px;
@@ -108,6 +108,10 @@ $align) {
 
 html {
     font-size: 62.5%;
+}
+
+body {
+    font-size: 1rem;
 }
 
 a {
@@ -125,7 +129,7 @@ ul {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 1.6rem;
-    line-height: 35px;
+//    line-height: 35px;
     cursor: pointer;
     text-align: center;
     display: block;
@@ -205,10 +209,18 @@ body {
         list-style-type: none;
         float: left;
         width:100vw;
+        height: auto;
+
         height: 800px;
+      
         background-image: url(../images/bg_header.jpg);
         background-position: center;
         background-size: cover;
+        
+        &--lemon {
+           background-image: url(../images/bg_shop.jpg); 
+        }
+       
    }
     &__arrow {
         position: absolute;
@@ -218,14 +230,15 @@ body {
         font-size: 80px;
         cursor: pointer;
         &--left {
-            left: 10%;
+            left: 5%;
         }
         &--right {
-            right: 10%;
+            right: 5%;
         }
        
     }
     
+
 }
 
 .header {
@@ -307,5 +320,60 @@ body {
         letter-spacing: 3px;
         text-transform: uppercase;
         text-align: center;
+        
+    }
+}
+
+.shop {
+    &__content {
+        width: 46%;
+        float: right;
+        padding-right: 180px;
+        margin-top: 50px;
+    }
+    &__title {
+        @include decorateTitle;
+//        line-height: 1rem;
+        text-align: left;
+        margin-bottom: 0;
+        font-size: 7rem;
+        line-height: 7.5rem;
+    }
+    &__text {
+        @include textStyle;
+        padding: 40px 0;
+        color: $white;
+        text-align: left;
+//        width: 80%;
+    }
+    &__button {
+        font-size: 1.9em;
+        color: #fff;
+        background-color: transparent;
+        border: 2px solid #fff;
+        width: 150px;
+        height: 60px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    &__price{
+         display: block;
+        font-size: 4.5em;
+        font-family: 'master_of_break';
+        font-style: normal;
+        text-transform: none;
+        margin-left: 5px;
+        letter-spacing: 0.1em;
+        color: white;
+    }
+}
+
+@media (max-width:480px){
+    .carousel__item {
+      background-image: url('../images/bg_header_little.jpg');
+        background-position: center;
+        background-size: cover;
+    max-height: 560px;
+        
     }
 }

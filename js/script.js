@@ -1,15 +1,21 @@
 $(function () {
 
 
-    var carouselList = $(".carousel__items");
-    var left = $(".carousel__arrow--left");
-    var right = $(".carousel__arrow--right");
+    var mainCarousel = $("#mainCarousel");
+    var lemonCarousel = $("#lemonCarousel");
+    
+    
+    function runCarousel(carouselID) {
 
+    var carouselList = carouselID;
+  
+
+    var left = $(".carousel__arrow--left");
+    var right = $(".carousel__arrow--right");   
 
     var inter = setInterval(changeSlide, 6000);
 
     function changeSlide() {
-
         carouselList.animate({
             'margin-left':'-100vw'
         }, 1000, moveFirstSlide);
@@ -50,12 +56,8 @@ $(function () {
         }
     })
 
-
-    carouselList.hover(function () {
-        window.clearInterval(inter);
-    }, function () {
-        inter = setInterval(changeSlide, 6000);
-    });
-
-
+     };
+    
+    runCarousel(mainCarousel);
+     runCarousel(lemonCarousel);
 })
