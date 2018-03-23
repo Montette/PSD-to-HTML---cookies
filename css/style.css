@@ -232,6 +232,7 @@ body {
   color: #f01b16;
   font-size: 3.5rem;
   font-weight: 400;
+  text-align: center;
 }
 
 .reservation__title--decorate {
@@ -354,6 +355,400 @@ body {
   margin-left: 5px;
   letter-spacing: 0.1em;
   color: white;
+}
+
+.icons {
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.icons__title {
+  font-family: "Nanami-book";
+  font-size: 3rem;
+  text-align: center;
+}
+
+.icons__box {
+  padding: 40px 100px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+}
+
+.icons__box:nth-child(2)::before, .icons__box:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 100px;
+  width: 2px;
+  display: block;
+}
+
+.gallery {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery__small-elem {
+  width: 25%;
+  margin: 0;
+  position: relative;
+}
+
+.gallery__big-elem {
+  width: 50%;
+  margin: 0;
+}
+
+.gallery__title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4.5rem;
+  font-family: "Nanami-Bold";
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gallery__title--orange {
+  color: #ff7e66;
+  letter-spacing: 12px;
+}
+
+.gallery__title--red {
+  color: #fff;
+}
+
+.blog {
+  margin-bottom: 80px;
+}
+
+.blog__header {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.blog__title {
+  font-family: "Nanami-Book";
+  color: #f01b16;
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.blog__title--decorate {
+  font-family: "master_of_break";
+  letter-spacing: 1.74px;
+}
+
+.blog__text {
+  font-family: "Nanami-Book";
+  font-size: 2.2rem;
+  color: #9f9a97;
+  line-height: 1.2;
+  padding: 0 60px 30px;
+  text-align: center;
+}
+
+.blog__button {
+  color: #fff;
+  background-color: #ff7e66;
+}
+
+.blog__content {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+}
+
+.blog__post {
+  width: 295px;
+  margin: 20px 15px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.blog__post:hover {
+  transform: translateY(30px);
+}
+
+.blog__post:hover .post__item {
+  width: 150%;
+  height: 360px;
+  transform: translate(-50%, 5%);
+}
+
+.blog__post:hover .button {
+  visibility: visible;
+}
+
+.post__item {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -150px;
+  background-color: #fff;
+  width: 100%;
+  height: 296px;
+  padding-top: 115px;
+  border-radius: 0 0 50% 50%;
+  transition: .3s;
+}
+
+.post__title {
+  font-family: 'Nanami-Book';
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.post__title--decorate {
+  font-family: "master_of_break";
+  letter-spacing: 1.74px;
+  color: red;
+}
+
+.post__button {
+  background-color: #ff7e66;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  margin-bottom: 40px;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+.contact {
+  background-image: url(../images/bg_cake.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 800px;
+  padding-top: 70px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: normal;
+      justify-content: normal;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.contact__title {
+  font-family: "Nanami-Book";
+  color: #f01b16;
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.contact__title--decorate {
+  font-family: "master_of_break";
+  letter-spacing: 1.74px;
+  color: #fff;
+}
+
+.contact__form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1280px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact__input {
+  font-family: 'Nanami-Book';
+  font-size: 1.8rem;
+  height: 50px;
+  width: 30%;
+  margin: 40px 0;
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding-left: 20px;
+  box-shadow: none;
+  outline: none;
+  color: #fff;
+}
+
+.contact__textarea {
+  width: 100%;
+  font-family: 'Nanami-Book';
+  background-color: transparent;
+  border: 1px solid #fff;
+  height: 255px;
+  margin: 0 0 20px;
+  font-size: 1.8rem;
+  color: #fff;
+  outline: none;
+  padding: 15px 0 0 20px;
+}
+
+.contact__button {
+  width: 100%;
+  background-color: #ff7e66;
+  color: white;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+
+:-ms-input-placeholder {
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+.contact-details {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  background-color: #fff2ed;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+.contact-details__item {
+  margin: 40px 30px;
+  background-color: #fff;
+  height: 275px;
+  position: relative;
+}
+
+.contact-details__variant {
+  font-size: 1.6rem;
+  font-family: 'Nanami-Book';
+  color: #464646;
+  text-transform: uppercase;
+  margin: 20px 0 10px 0;
+}
+
+.contact-details__variant--grey {
+  color: #81868e;
+}
+
+.contact-details__icon {
+  position: absolute;
+  z-index: 100;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.map__google {
+  width: 100%;
+  height: 550px;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+.map__google:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.map__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.footer__title {
+  font-family: "master_of_break";
+  letter-spacing: 1.74px;
+  margin: 0 0 20px 0;
+  font-size: 3rem;
+  color: red;
+}
+
+.footer__clausel {
+  font-family: "Nanami-Book";
+  font-size: 2.2rem;
+  color: #9f9a97;
+  line-height: 1.2;
+  padding: 0 60px 30px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.footer__link {
+  display: inline-block;
+  margin: 0 10px;
 }
 
 @media (max-width: 480px) {
