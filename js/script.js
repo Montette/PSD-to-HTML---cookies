@@ -60,4 +60,12 @@ $(function () {
     
     runCarousel(mainCarousel);
      runCarousel(lemonCarousel);
+    
+    
+    //burger //
+    
+     $(".nav__burger").on("click", function() {
+            $(".nav__menu").toggleClass("nav__menu--active");
+            $(".nav__burger").toggleClass("active");
+        })
 })
