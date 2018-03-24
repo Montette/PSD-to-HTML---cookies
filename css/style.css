@@ -54,9 +54,15 @@
   font-style: normal;
 }
 
-/*Ci=olors */
+/*Ciolors */
 /* Mixins */
-/* general & typography */
+/*General*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-size: 10px;
 }
@@ -102,15 +108,7 @@ ul {
   }
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
+/* Navigation */
 .nav {
   background-color: #fff;
 }
@@ -188,11 +186,12 @@ body {
   top: -60px;
 }
 
+/*burger */
 .nav__burger {
   height: 40px;
   width: 40px;
   position: absolute;
-  top: 30px;
+  top: 15px;
   right: 40px;
   display: none;
   z-index: 2;
@@ -250,6 +249,7 @@ body {
   transform: translateY(-50%) rotate(-45deg);
 }
 
+/* Carousel*/
 .carousel {
   width: 100vw;
   overflow: hidden;
@@ -275,6 +275,8 @@ body {
   height: 800px;
   background-position: center;
   background-size: cover;
+  /* Carousel in main header */
+  /* Carousel in shop section */
 }
 
 @media all and (max-width: 767px) {
@@ -336,6 +338,7 @@ body {
   right: 4%;
 }
 
+/*Main header */
 .header__text {
   position: absolute;
   left: 50%;
@@ -382,10 +385,11 @@ body {
   }
 }
 
-.reservation {
+/* Section reservation */
+.reservation, .menu {
   max-width: 1180px;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 150px;
   display: -ms-flexbox;
   display: flex;
@@ -398,12 +402,12 @@ body {
 }
 
 @media all and (max-width: 767px) {
-  .reservation {
-    padding: 50px 0 50px 0;
+  .reservation, .menu {
+    padding: 100px 0;
   }
 }
 
-.reservation__title {
+.reservation__title, .menu__title {
   font-family: "Nanami-Book";
   color: #f01b16;
   font-size: 3.5em;
@@ -411,38 +415,44 @@ body {
   text-align: center;
 }
 
-.reservation__title--decorate {
+@media all and (max-width: 767px) {
+  .reservation__title, .menu__title {
+    font-size: 3em;
+  }
+}
+
+.reservation__title--decorate, .menu__title--decorate {
   font-family: "master_of_break";
   letter-spacing: 1.74px;
 }
 
-.reservation__text {
+.reservation__text, .menu__text {
   font-family: "Nanami-Light";
   font-size: 2.2em;
   color: #9f9a97;
   line-height: 1.2;
-  padding: 0 60px 30px;
+  padding: 40px 60px 40px;
   text-align: center;
 }
 
 @media all and (max-width: 767px) {
-  .reservation__text {
-    padding: 0 20px 20px 20px;
+  .reservation__text, .menu__text {
+    padding: 30px 20px 40px 20px;
   }
 }
 
 @media all and (min-width: 443px) and (max-width: 767px) {
-  .reservation__text {
-    padding: 0 35px 35px 20px;
+  .reservation__text, .menu__text {
+    padding: 30px 35px 35px 20px;
   }
 }
 
-.reservation__button {
+.reservation__button, .menu__button {
   color: #fff;
   background-color: #ff7e66;
 }
 
-.reservation__button:hover {
+.reservation__button:hover, .menu__button:hover {
   background-color: #fff;
   color: #ff7e66;
   border: 1px solid #ff7e66;
@@ -493,9 +503,9 @@ body {
   padding-right: 70px;
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 1199px) {
   .cooking__content {
-    padding: 0;
+    padding: 50px 0;
   }
 }
 
@@ -504,19 +514,25 @@ body {
   font-size: 2.2em;
   color: #9f9a97;
   line-height: 1.2;
-  padding: 0 60px 30px;
+  padding: 40px 60px 40px;
   text-align: center;
 }
 
 @media all and (max-width: 767px) {
   .cooking__text {
-    padding: 0 20px 20px 20px;
+    padding: 30px 20px 40px 20px;
   }
 }
 
 @media all and (min-width: 443px) and (max-width: 767px) {
   .cooking__text {
-    padding: 0 35px 35px 20px;
+    padding: 30px 35px 35px 20px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .cooking__text {
+    padding-bottom: 0;
   }
 }
 
@@ -528,6 +544,7 @@ body {
   letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 @media all and (max-width: 767px) {
@@ -598,7 +615,7 @@ body {
   font-size: 2.2em;
   color: #9f9a97;
   line-height: 1.2;
-  padding: 0 60px 30px;
+  padding: 40px 60px 40px;
   text-align: center;
   padding: 40px 0;
   color: #fff;
@@ -607,19 +624,20 @@ body {
 
 @media all and (max-width: 767px) {
   .shop__text {
-    padding: 0 20px 20px 20px;
+    padding: 30px 20px 40px 20px;
   }
 }
 
 @media all and (min-width: 443px) and (max-width: 767px) {
   .shop__text {
-    padding: 0 35px 35px 20px;
+    padding: 30px 35px 35px 20px;
   }
 }
 
 @media all and (max-width: 767px) {
   .shop__text {
-    padding: 0 150px 0 0;
+    padding: 30px 150px 30px 0;
+    font-size: 1.8em;
   }
 }
 
@@ -680,6 +698,7 @@ body {
 @media all and (max-width: 767px) {
   .icons {
     margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 
@@ -698,7 +717,7 @@ body {
 
 @media all and (max-width: 767px) {
   .icons__box {
-    padding: 20px 50px;
+    padding: 40px 50px;
   }
 }
 
@@ -851,6 +870,12 @@ body {
   text-align: center;
 }
 
+@media all and (max-width: 767px) {
+  .blog__title {
+    font-size: 3em;
+  }
+}
+
 .blog__title--decorate {
   font-family: "master_of_break";
   letter-spacing: 1.74px;
@@ -861,19 +886,19 @@ body {
   font-size: 2.2em;
   color: #9f9a97;
   line-height: 1.2;
-  padding: 0 60px 30px;
+  padding: 40px 60px 40px;
   text-align: center;
 }
 
 @media all and (max-width: 767px) {
   .blog__text {
-    padding: 0 20px 20px 20px;
+    padding: 30px 20px 40px 20px;
   }
 }
 
 @media all and (min-width: 443px) and (max-width: 767px) {
   .blog__text {
-    padding: 0 35px 35px 20px;
+    padding: 30px 35px 35px 20px;
   }
 }
 
@@ -931,15 +956,9 @@ body {
   background-color: #fff;
   width: 100%;
   height: 296px;
-  padding-top: 115px;
+  padding-top: 160px;
   border-radius: 0 0 50% 50%;
   transition: .3s;
-}
-
-@media all and (max-width: 767px) {
-  .post__item {
-    padding-top: 150px;
-  }
 }
 
 .post__title {
@@ -997,6 +1016,12 @@ body {
   text-align: center;
   color: #fff;
   margin-bottom: 50px;
+}
+
+@media all and (max-width: 767px) {
+  .contact__title {
+    font-size: 3em;
+  }
 }
 
 .contact__title--decorate {
@@ -1183,20 +1208,20 @@ body {
   font-size: 2.2em;
   color: #9f9a97;
   line-height: 1.2;
-  padding: 0 60px 30px;
+  padding: 40px 60px 40px;
   text-align: center;
   margin-bottom: 0;
 }
 
 @media all and (max-width: 767px) {
   .footer__clausel {
-    padding: 0 20px 20px 20px;
+    padding: 30px 20px 40px 20px;
   }
 }
 
 @media all and (min-width: 443px) and (max-width: 767px) {
   .footer__clausel {
-    padding: 0 35px 35px 20px;
+    padding: 30px 35px 35px 20px;
   }
 }
 

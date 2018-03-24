@@ -55,7 +55,7 @@
 }
 
 
-/*Ci=olors */
+/*Ciolors */
 
 $white: #fff;
 $orange: #ff7e66;
@@ -100,6 +100,9 @@ $align) {
     font-size: 3.5em;
     font-weight: 400;
     text-align: center;
+    @include screen("phone"){
+        font-size: 3em;
+    }
 }
 
 @mixin decorateWord {
@@ -112,13 +115,13 @@ $align) {
     font-size: 2.2em;
     color: rgb(159, 154, 151);
     line-height: 1.2;
-    padding: 0 60px 30px;
+    padding: 40px 60px 40px;
     text-align: center;
     @include screen("phone"){
-        padding: 0 20px 20px 20px;
+        padding: 30px 20px 40px 20px;
     }
     @include screen("phoneLandscape"){
-            padding: 0 35px 35px 20px;
+            padding: 30px 35px 35px 20px;
         }
 }
 
@@ -179,33 +182,14 @@ $smallPhone: "(max-width: 393px)";
 }
 
 
+/*General*/
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* general & typography */
-
-//html {
-//    font-size: 62.5%;
-//}
-//
-//body {
-//    font-size: 1rem;
-//    
-//}
 
 body {
     font-size: 10px;
@@ -232,7 +216,6 @@ ul {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 1.6em;
-//    line-height: 35px;
     cursor: pointer;
     text-align: center;
     display: block;
@@ -242,33 +225,17 @@ ul {
     @include screen("tabletAndphone"){
         font-size: 2em;
         }
-    
 }
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
+/* Navigation */
 
 .nav {
     background-color: $white;
-//    @include screen("tabletAndphone"){
-//        position: fixed;
-//        top: 0;
-//        left: 0;
-//        z-index: 100;
-//        width: 100vw;
-  
 
     &__wrapper {
         @include centerWrapper(1280px);
         @include flexPosition(space-between,
         center);
-        
     }
 
     &__menu {
@@ -295,9 +262,6 @@ body {
         @include screen("tabletAndphone"){
             margin: 20px 0;
         }
-//        @include screen("phoneLandscape"){
-//            margin: 20px 0;
-//        }
     }
 
     &__link {
@@ -324,13 +288,13 @@ body {
 }
 
 
-//burger //
+/*burger */
 
 .nav__burger {
     height: 40px;
     width: 40px;
     position: absolute;
-    top: 30px;
+    top: 15px;
     right: 40px;
     display: none;
      @include screen("tabletAndphone"){
@@ -386,7 +350,7 @@ body {
 }
 
 
-
+/* Carousel*/
 
 .carousel {
     width: 100vw;
@@ -408,30 +372,25 @@ body {
         height: 800px;
         background-position: center;
         background-size: cover;
-        
-        @include screen("phone"){
+       @include screen("phone"){
                max-height: 600px;
             }
+        /* Carousel in main header */
         &--main1 {
            background-image: url(../images/bg_header.jpg);
             @include screen("phone"){
                 background-image: url(../images/bg_header_little.jpg);
-//                max-height: 560px;
             }
             @include screen("phoneLandscape"){
                 background-image: url(../images/bg_header.jpg);
             }
         }
+        /* Carousel in shop section */
        &--lemon1 {
            background-image: url(../images/bg_shop.jpg);
            @include screen("tabletAndphone"){
-//                background-image: url(../images/bg_shop_little.jpg);
                background-position: left;
-              
-               
-                
             }
-            
         }
         &--lemon2 {
            background-image: url(../images/muffin.jpg); 
@@ -449,21 +408,16 @@ body {
         color: $white;
         font-size: 80px;
         cursor: pointer;
-//        @include screen("phone"){
-//            top:55%
-//        }
         &--left {
             left: 4%;
         }
         &--right {
             right: 4%;
         }
-       
     }
-    
-
 }
 
+/*Main header */
 .header {
     &__text{
         position: absolute;
@@ -477,7 +431,6 @@ body {
     }
     &__title {
         @include decorateTitle;
-        
     }
     &__greeting {
         font-size: 2.5em;
@@ -491,17 +444,18 @@ body {
             font-size: 3em;
         }
     }
-    
 }
 
-.reservation {
+/* Section reservation */
+
+.reservation, .menu {
     @include centerWrapper(1180px);
-    padding-top: 100px;
+    padding-top: 150px;
     padding-bottom: 150px;
     @include flexPosition(center, center);
     flex-direction: column;
     @include screen("phone"){
-        padding: 50px 0 50px 0;
+        padding: 100px 0;
     }
     &__title {
         @include sectionTitle;
@@ -512,27 +466,23 @@ body {
     &__text {
         @include textStyle;
          @include screen("phone"){
-//        padding: 0 20px 30px 20px;
         }
     }
     &__button {
         color: $white;
         background-color: $orange;
-        
-      
-       
         &:hover {
-            @include buttonHover($white,$orange,$orange);
-             
+           @include buttonHover($white,$orange,$orange);
         }
     }
-    
 }
 
 .cooking {
     display: flex;
     @include screen("tabletAndphone"){
         flex-direction: column;
+
+        
     }
     background-color: #fff2ed;
     min-height: 750px;
@@ -553,8 +503,8 @@ body {
         flex-direction: column;
         padding-left: 70px;
         padding-right: 70px;
-        @include screen("phone"){
-            padding: 0;
+        @include screen("tabletAndphone"){
+            padding: 50px 0;
         }
         
         
@@ -567,7 +517,7 @@ body {
     &__text {
        @include textStyle;
         @include screen("phone"){
-//        padding: 0 20px 20px 20px;
+        padding-bottom: 0;
         }
     }
     &__title {
@@ -578,6 +528,7 @@ body {
         letter-spacing: 3px;
         text-transform: uppercase;
         text-align: center;
+        margin-bottom: 20px;
         @include screen("phone"){
             font-size: 3em;
             margin-left: 20px;
@@ -626,7 +577,8 @@ body {
         color: $white;
         text-align: left;
         @include screen("phone"){
-            padding: 0 150px 0 0;
+            padding: 30px 150px 30px 0;
+            font-size: 1.8em;
         }
         @include screen("tablet"){
             padding: 50px 200px 100px 0;
@@ -667,7 +619,8 @@ body {
     @include flexPosition(center, center);
     flex-wrap: wrap;
     @include screen("phone"){
-            margin-top: 50px;
+        margin-top: 50px;
+        margin-bottom: 50px;
         }
     
     &__title {
@@ -681,7 +634,7 @@ body {
         position: relative;
         text-align: center;
         @include screen("phone"){
-            padding: 20px 50px;
+            padding: 40px 50px;
         }
         &:nth-child(2)::before,
         &:nth-child(3)::before {
@@ -869,10 +822,10 @@ body {
     background-color: $white;
     width: 100%;
     height: 296px;
-    padding-top: 115px;
-    @include screen("phone"){
-       padding-top: 150px; 
-    }
+    padding-top: 160px;
+//    @include screen("phone"){
+//       padding-top: 150px; 
+//    }
 //    @include flexPosition(center,flex-end);
 //    display: flex;
 //    justify-content: center;
