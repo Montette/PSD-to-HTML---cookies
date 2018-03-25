@@ -138,9 +138,9 @@ ul {
 @media all and (max-width: 1199px) {
   .nav__menu {
     display: block;
-    position: absolute;
     width: 100%;
     top: -700px;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -386,8 +386,9 @@ ul {
   }
 }
 
-/* Section reservation */
-.reservation, .menu {
+/* Section reservation and menu */
+.reservation,
+.menu {
   max-width: 1180px;
   margin: 0 auto;
   padding-top: 150px;
@@ -403,12 +404,14 @@ ul {
 }
 
 @media all and (max-width: 767px) {
-  .reservation, .menu {
+  .reservation,
+  .menu {
     padding: 100px 0;
   }
 }
 
-.reservation__title, .menu__title {
+.reservation__title,
+.menu__title {
   font-family: "Nanami-Book";
   color: #f01b16;
   font-size: 3.5em;
@@ -417,17 +420,20 @@ ul {
 }
 
 @media all and (max-width: 767px) {
-  .reservation__title, .menu__title {
+  .reservation__title,
+  .menu__title {
     font-size: 3em;
   }
 }
 
-.reservation__title--decorate, .menu__title--decorate {
+.reservation__title--decorate,
+.menu__title--decorate {
   font-family: "master_of_break";
   letter-spacing: 1.74px;
 }
 
-.reservation__text, .menu__text {
+.reservation__text,
+.menu__text {
   font-family: "Nanami-Light";
   font-size: 2.2em;
   color: #9f9a97;
@@ -437,29 +443,34 @@ ul {
 }
 
 @media all and (max-width: 767px) {
-  .reservation__text, .menu__text {
+  .reservation__text,
+  .menu__text {
     padding: 30px 20px 40px 20px;
   }
 }
 
 @media all and (min-width: 443px) and (max-width: 767px) {
-  .reservation__text, .menu__text {
+  .reservation__text,
+  .menu__text {
     padding: 30px 35px 35px 20px;
   }
 }
 
-.reservation__button, .menu__button {
+.reservation__button,
+.menu__button {
   color: #fff;
   background-color: #ff7e66;
 }
 
-.reservation__button:hover, .menu__button:hover {
+.reservation__button:hover,
+.menu__button:hover {
   background-color: #fff;
   color: #ff7e66;
   border: 1px solid #ff7e66;
   transition: all .6s ease 0s;
 }
 
+/* section cooking */
 .cooking {
   display: -ms-flexbox;
   display: flex;
@@ -563,6 +574,7 @@ ul {
   }
 }
 
+/* section shop */
 .shop__content {
   width: 46%;
   float: right;
@@ -740,6 +752,7 @@ ul {
   }
 }
 
+/* section gallery */
 .gallery {
   display: -ms-flexbox;
   display: flex;
@@ -838,6 +851,7 @@ ul {
   color: #fff;
 }
 
+/* section blog */
 .blog {
   margin-bottom: 80px;
 }
@@ -987,6 +1001,7 @@ ul {
   transform: translate(-50%, -20%);
 }
 
+/* section contact */
 .contact__wrapper {
   background-image: url(../images/bg_cake.jpg);
   background-size: cover;
@@ -1106,7 +1121,7 @@ ul {
   color: white;
 }
 
-.contact-details {
+.contact__contact-details {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -1120,7 +1135,7 @@ ul {
 }
 
 @media all and (max-width: 767px) {
-  .contact-details {
+  .contact__contact-details {
     padding-bottom: 50px;
   }
 }
@@ -1152,13 +1167,13 @@ ul {
 
 .contact-details__icon {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
   top: 15%;
-  left: 50%;
-  transform: translate(-50%);
 }
 
-.map {
+.contact__map {
   width: 100%;
   height: 100%;
   position: relative;
@@ -1184,6 +1199,7 @@ ul {
   z-index: 100;
 }
 
+/* footer */
 .footer {
   display: -ms-flexbox;
   display: flex;

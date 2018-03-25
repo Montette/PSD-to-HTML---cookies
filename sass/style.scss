@@ -75,32 +75,33 @@ $align) {
 }
 
 @mixin absoluteXcenter {
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
 
 @mixin decorateTitle {
-     font-family: "master_of_break";
+    font-family: "master_of_break";
     font-size: 8em;
     line-height: 1em;
     color: rgb(237, 32, 36);
     text-transform: none;
     text-shadow: 4px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
     text-align: center;
-    @include screen("phone"){
+    @include screen("phone") {
         font-size: 7em;
-        
+
     }
 }
 
 @mixin sectionTitle {
-    font-family: "Nanami-Book";;
+    font-family: "Nanami-Book";
     color: #f01b16;
     font-size: 3.5em;
     font-weight: 400;
     text-align: center;
-    @include screen("phone"){
+    @include screen("phone") {
         font-size: 3em;
     }
 }
@@ -117,15 +118,17 @@ $align) {
     line-height: 1.2;
     padding: 45px 60px 45px;
     text-align: center;
-    @include screen("phone"){
+    @include screen("phone") {
         padding: 30px 20px 40px 20px;
     }
-    @include screen("phoneLandscape"){
-            padding: 30px 35px 35px 20px;
-        }
+    @include screen("phoneLandscape") {
+        padding: 30px 35px 35px 20px;
+    }
 }
 
-@mixin buttonHover ($background-color,$color,$borderColor) {
+@mixin buttonHover ($background-color,
+$color,
+$borderColor) {
     background-color: $background-color;
     color: $color;
     border: 1px solid $borderColor;
@@ -135,50 +138,50 @@ $align) {
 
 
 @mixin screen($size) {
-$smallMonitor: "(min-width: 974px) and (max-width: 1299px)";
-$tablet: "(min-width: 768px) and (max-width: 1199px)";
-$tabletAndPhone: "(max-width: 1199px)";
-$phone: "(max-width: 767px)";
-$phoneLandscape: "(min-width: 443px) and (max-width: 767px)";
-$smallPhone: "(max-width: 393px)";
+    $smallMonitor: "(min-width: 974px) and (max-width: 1299px)";
+    $tablet: "(min-width: 768px) and (max-width: 1199px)";
+    $tabletAndPhone: "(max-width: 1199px)";
+    $phone: "(max-width: 767px)";
+    $phoneLandscape: "(min-width: 443px) and (max-width: 767px)";
+    $smallPhone: "(max-width: 393px)";
 
-@if $size == smallMonitor {
-  @media all and #{$smallMonitor} {
-    @content;
-  }
-}
+    @if $size==smallMonitor {
+        @media all and #{$smallMonitor} {
+            @content;
+        }
+    }
 
-@else if $size == tablet {
-    @media all and #{$tablet} {
-      @content;
+    @else if $size==tablet {
+        @media all and #{$tablet} {
+            @content;
+        }
     }
-  }
-   @else if $size == tabletAndphone {
-    @media all and #{$tabletAndPhone} {
-      @content;
+    @else if $size==tabletAndphone {
+        @media all and #{$tabletAndPhone} {
+            @content;
+        }
     }
-  }
-    @else if $size == phoneLandscape {
-    @media all and #{$phoneLandscape} {
-      @content;
+    @else if $size==phoneLandscape {
+        @media all and #{$phoneLandscape} {
+            @content;
+        }
     }
-  }
- 
-  @else if $size == phone {
-    @media all and #{$phone} {
-      @content;
+
+    @else if $size==phone {
+        @media all and #{$phone} {
+            @content;
+        }
     }
-  }
-    @else if $size == smallPhone {
-    @media all and #{$smallPhone} {
-      @content;
+    @else if $size==smallPhone {
+        @media all and #{$smallPhone} {
+            @content;
+        }
     }
-  }
-  @else {
-    @media all and #{$size} {
-      @content;
+    @else {
+        @media all and #{$size} {
+            @content;
+        }
     }
-  }
 }
 
 
@@ -193,10 +196,10 @@ $smallPhone: "(max-width: 393px)";
 
 body {
     font-size: 10px;
-    @include screen("phone"){
+    @include screen("phone") {
         font-size: 8px;
     }
-    @include screen ("tabletAndphone"){
+    @include screen ("tabletAndphone") {
         font-size: 9px;
     }
 }
@@ -222,9 +225,9 @@ ul {
     width: 245px;
     height: 60px;
     border: none;
-    @include screen("tabletAndphone"){
+    @include screen("tabletAndphone") {
         font-size: 2em;
-        }
+    }
 }
 
 /* Navigation */
@@ -243,24 +246,23 @@ ul {
         @include flexPosition(space-between,
         center);
         padding-top: 30px;
-          @include screen("tabletAndphone"){
+        @include screen("tabletAndphone") {
             display: block;
-            position: absolute;
             width: 100%;
-            top:-700px;
+            top: -700px;
             @include absoluteXcenter;
             text-align: center;
             transition: .5s;
             background: $white;
             padding-top: 60px;
             padding-bottom: 10px;
-            z-index: 1;        
+            z-index: 1;
         }
     }
 
     &__item {
         margin: 0 20px;
-        @include screen("tabletAndphone"){
+        @include screen("tabletAndphone") {
             margin: 20px 0;
         }
     }
@@ -277,11 +279,11 @@ ul {
             border-right: 3px solid #fff581;
             border-left: 3px solid #fff581;
         }
-        @include screen("tabletAndphone"){
+        @include screen("tabletAndphone") {
             font-size: 2.4em;
         }
     }
-  
+
 }
 
 .nav__menu--active {
@@ -298,10 +300,10 @@ ul {
     top: 25px;
     right: 40px;
     display: none;
-     @include screen("tabletAndphone"){
-         display: block;
-     }
-     z-index: 2;
+    @include screen("tabletAndphone") {
+        display: block;
+    }
+    z-index: 2;
 }
 
 .nav__burger span {
@@ -358,50 +360,50 @@ ul {
     overflow: hidden;
     position: relative;
     height: 800px;
-    @include screen("phone"){
-               max-height: 600px;
-            }
- 
-    &__items{
-        width:300vw;
+    @include screen("phone") {
+        max-height: 600px;
+    }
+
+    &__items {
+        width: 300vw;
         height: 800px;
     }
     &__item {
         list-style-type: none;
         float: left;
-        width:100vw;
+        width: 100vw;
         height: 800px;
         background-position: center;
         background-size: cover;
-       @include screen("phone"){
-               max-height: 600px;
-            }
+        @include screen("phone") {
+            max-height: 600px;
+        }
         /* Carousel in main header */
         &--main1 {
-           background-image: url(../images/bg_header.jpg);
-            @include screen("phone"){
+            background-image: url(../images/bg_header.jpg);
+            @include screen("phone") {
                 background-image: url(../images/bg_header_little.jpg);
             }
-            @include screen("phoneLandscape"){
+            @include screen("phoneLandscape") {
                 background-image: url(../images/bg_header.jpg);
             }
         }
         /* Carousel in shop section */
-       &--lemon1 {
-           background-image: url(../images/bg_shop.jpg);
-           @include screen("tabletAndphone"){
-               background-position: left;
+        &--lemon1 {
+            background-image: url(../images/bg_shop.jpg);
+            @include screen("tabletAndphone") {
+                background-position: left;
             }
         }
         &--lemon2 {
-           background-image: url(../images/muffin.jpg); 
+            background-image: url(../images/muffin.jpg);
             background-position: left;
-       }
-        &--lemon3 {
-           background-image: url(../images/icecreams.jpeg); 
-            background-position:left;
         }
-  }
+        &--lemon3 {
+            background-image: url(../images/icecreams.jpeg);
+            background-position: left;
+        }
+    }
     &__arrow {
         position: absolute;
         top: 50%;
@@ -419,13 +421,12 @@ ul {
 }
 
 /*Main header */
+
 .header {
-    &__text{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+    &__text {
+        @include absoluteXcenter;
         top: 20%;
-        @include screen("phone"){
+        @include screen("phone") {
             width: 80%;
             top: 10%;
         }
@@ -441,84 +442,80 @@ ul {
         letter-spacing: 3px;
         text-align: center;
         padding-top: 60px;
-        @include screen("phone"){
+        @include screen("phone") {
             font-size: 3em;
         }
     }
 }
 
-/* Section reservation */
+/* Section reservation and menu */
 
-.reservation, .menu {
+.reservation,
+.menu {
     @include centerWrapper(1180px);
     padding-top: 150px;
     padding-bottom: 150px;
-    @include flexPosition(center, center);
+    @include flexPosition(center,
+    center);
     flex-direction: column;
-    @include screen("phone"){
+    @include screen("phone") {
         padding: 100px 0;
     }
     &__title {
         @include sectionTitle;
         &--decorate {
-        @include decorateWord;
-    }
+            @include decorateWord;
+        }
     }
     &__text {
         @include textStyle;
-         @include screen("phone"){
-        }
+        @include screen("phone") {}
     }
     &__button {
         color: $white;
         background-color: $orange;
         &:hover {
-           @include buttonHover($white,$orange,$orange);
+            @include buttonHover($white,
+            $orange,
+            $orange);
         }
     }
 }
 
+/* section cooking */
+
 .cooking {
     display: flex;
-    @include screen("tabletAndphone"){
+    @include screen("tabletAndphone") {
         flex-direction: column;
-
-        
-    }
+   }
     background-color: #fff2ed;
     min-height: 750px;
-    &__image{
+    &__image {
         flex-basis: 50%;
-         background: url('../images/recipe.jpg') no-repeat;
+        background: url('../images/recipe.jpg') no-repeat;
         background-size: cover;
         background-position: center;
         height: 750px;
-        @include screen("phone"){
-        height: 360px;
+        @include screen("phone") {
+            height: 360px;
         }
-        
-    }
+   }
     &__content {
         flex-basis: 50%;
-        @include flexPosition(center, center);
+        @include flexPosition(center,
+        center);
         flex-direction: column;
         padding-left: 70px;
         padding-right: 70px;
-        @include screen("tabletAndphone"){
+        @include screen("tabletAndphone") {
             padding: 50px 0;
         }
-        
-        
-      
-        
-    
-        
-        
     }
     &__text {
-       @include textStyle;
-        @include screen("phone"){
-        padding-bottom: 0;
+        @include textStyle;
+        @include screen("phone") {
+            padding-bottom: 0;
         }
     }
     &__title {
@@ -530,33 +527,34 @@ ul {
         text-transform: uppercase;
         text-align: center;
         margin-bottom: 20px;
-        @include screen("phone"){
+        @include screen("phone") {
             font-size: 3em;
             margin-left: 20px;
             margin-right: 20px;
         }
-        @include screen("phoneLandscape"){
-             margin-left: 50px;
+        @include screen("phoneLandscape") {
+            margin-left: 50px;
             margin-right: 50px;
         }
-        
+
     }
 }
 
+/* section shop */
+
 .shop {
-//    min-height: 800px;
     &__content {
         width: 46%;
         float: right;
         padding-right: 180px;
         margin-top: 50px;
-        @include screen("tabletAndphone"){
-            float:none;
-            width:100%;
+        @include screen("tabletAndphone") {
+            float: none;
+            width: 100%;
             margin: 80px 0 0 70px;
             padding: 0;
         }
-        @include screen("tablet"){
+        @include screen("tablet") {
             margin-left: 100px;
         }
     }
@@ -565,9 +563,8 @@ ul {
         line-height: 1em;
         text-align: left;
         margin-bottom: 0;
-       
-        font-size: 7em;
-        @include screen("phone"){
+       font-size: 7em;
+        @include screen("phone") {
             font-size: 5.5em;
         }
 
@@ -577,14 +574,14 @@ ul {
         padding: 40px 0;
         color: $white;
         text-align: left;
-        @include screen("phone"){
+        @include screen("phone") {
             padding: 30px 150px 30px 0;
             font-size: 1.8em;
         }
-        @include screen("tablet"){
+        @include screen("tablet") {
             padding: 50px 200px 100px 0;
-            }
-//        width: 80%;
+        }
+
     }
     &__button {
         font-size: 1.9em;
@@ -596,11 +593,13 @@ ul {
         margin-top: 40px;
         margin-bottom: 40px;
         &:hover {
-            @include buttonHover($white,#dac572,$white);
+            @include buttonHover($white,
+            #dac572,
+            $white);
         }
     }
-    &__price{
-         display: block;
+    &__price {
+        display: block;
         font-size: 4.5em;
         font-family: 'master_of_break';
         font-style: normal;
@@ -608,8 +607,8 @@ ul {
         margin-left: 5px;
         letter-spacing: 0.1em;
         color: white;
-        @include screen("tabletAndphone"){
-            font-size:6em;
+        @include screen("tabletAndphone") {
+            font-size: 6em;
             margin-left: 0;
         }
     }
@@ -617,13 +616,14 @@ ul {
 
 .icons {
     display: flex;
-    @include flexPosition(center, center);
+    @include flexPosition(center,
+    center);
     flex-wrap: wrap;
-    @include screen("phone"){
+    @include screen("phone") {
         margin-top: 50px;
         margin-bottom: 50px;
-        }
-    
+    }
+
     &__title {
         font-family: "Nanami-book";
         font-size: 3em;
@@ -634,13 +634,13 @@ ul {
         margin: 0;
         position: relative;
         text-align: center;
-        @include screen("phone"){
+        @include screen("phone") {
             padding: 40px 50px;
         }
         &:nth-child(2)::before,
         &:nth-child(3)::before {
-            @include screen("tabletAndphone"){
-            display: none;
+            @include screen("tabletAndphone") {
+                display: none;
             }
             content: "";
             position: absolute;
@@ -648,17 +648,18 @@ ul {
             top: 50%;
             left: 0;
             transform: translateY(-50%);
-           height: 100px;
+            height: 100px;
             width: 2px;
             display: block;
-            
+
         }
     }
 }
 
+/* section gallery */
+
 .gallery {
     display: flex;
-//    @include
     flex-wrap: wrap;
     &__img {
         width: 100%;
@@ -667,67 +668,62 @@ ul {
         margin: 0;
         padding: 0;
         transition: .5s;
-        &:hover{
+        &:hover {
             transform: scale(1.1);
             opacity: .8;
             cursor: pointer;
         }
-        
+
     }
     &__small-elem {
         width: 25%;
         margin: 0;
         position: relative;
         overflow: hidden;
-        @include screen("phone"){
+        @include screen("phone") {
             width: 100%;
             height: 320px;
-            
+
         }
-        @include screen("tablet"){
+        @include screen("tablet") {
             width: 50%;
             height: 430px;
-            
+
         }
-        @include screen("phoneLandscape"){
+        @include screen("phoneLandscape") {
             width: 100%;
             height: 430px;
-            
+
         }
-   
+
     }
     &__big-elem {
         width: 50%;
         margin: 0;
         overflow: hidden;
-         @include screen("phone"){
+        @include screen("phone") {
             width: 100%;
-             height: 320px;
-             
+            height: 320px;
         }
-         
-        @include screen("tablet"){
+
+        @include screen("tablet") {
             width: 100%;
             height: 430px;
-            
         }
-        @include screen("phoneLandscape"){
+        @include screen("phoneLandscape") {
             width: 100%;
             height: 430px;
-            
         }
     }
     &__title {
         position: absolute;
         top: 50%;
-        left:50%;
-        transform: translate(-50%,-50%);
+        left: 50%;
+        transform: translate(-50%, -50%);
         font-size: 5em;
         font-family: "Nanami-Bold";
         text-align: center;
         text-transform: uppercase;
-    
-        
         &--orange {
             color: $orange;
             letter-spacing: 12px;
@@ -735,29 +731,29 @@ ul {
         &--red {
             color: $white;
         }
-        
     }
 }
 
+/* section blog */
+
 .blog {
     margin-bottom: 80px;
-    &__header{
-     @include centerWrapper(1180px);
-     padding-top: 150px;
-     padding-bottom: 50px;
-        
-    @include flexPosition(center, center);
-    flex-direction: column;
-    @include screen("phone"){
+    &__header {
+        @include centerWrapper(1180px);
+        padding-top: 150px;
+        padding-bottom: 50px;
+        @include flexPosition(center,
+        center);
+        flex-direction: column;
+        @include screen("phone") {
             padding-top: 50px;
-             
-        }    
+        }
     }
     &__title {
         @include sectionTitle;
         &--decorate {
-        @include decorateWord;
-    }
+            @include decorateWord;
+        }
     }
     &__text {
         @include textStyle;
@@ -766,31 +762,20 @@ ul {
         color: $white;
         background-color: $orange;
     }
-    &__content{
-       width: 100%;
-        @include flexPosition(center,center);
+    &__content {
+        width: 100%;
+        @include flexPosition(center,
+        center);
         flex-wrap: wrap;
-//        margin: 0 auto;
         padding: 0;
-        @include screen("smallMonitor"){
-           padding: 0 150px;
-         }
-        @include screen("phoneLandscape"){
-//        padding: 
-    }
-       
+        @include screen("smallMonitor") {
+            padding: 0 150px;
+        }
+        @include screen("phoneLandscape") {}
+
     }
     &__post {
-    
         width: 295px;
-//        flex-basis: 15%;
-//        @include screen("phoneLandscape"){
-//        width:45%;
-//        margin: 20px 10px;
-//    }
-//        @include screen("smallMonitor"){
-//            width: 350px;
-//        }
         margin: 20px 15px;
         position: relative;
         overflow: hidden;
@@ -798,79 +783,44 @@ ul {
         &:hover {
             transform: translateY(30px);
             & .post__item {
-            width: 150%;
-            height: 360px;
-            
-            transform: translate(-50%, 5%);
+                width: 150%;
+                height: 360px;
+
+                transform: translate(-50%, 5%);
             }
             & .button {
-                visibility:visible;
+                visibility: visible;
             }
-        
-        
-    }
+        }
 
     }
-    
-    
+
 }
 
 .post__item {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    @include absoluteXcenter;
     top: -150px;
     background-color: $white;
     width: 100%;
     height: 296px;
     padding-top: 160px;
-//    @include screen("phone"){
-//       padding-top: 150px; 
-//    }
-//    @include flexPosition(center,flex-end);
-//    display: flex;
-//    justify-content: center;
-// 
-//    flex-direction: column;
     border-radius: 0 0 50% 50%;
     transition: .3s;
-   
-
-//    &:hover {
-//        width: 150%;
-//        height: 360px;
-//        transform: translate(-50%, 5%);
-//        & > .button {
-//            visibility:visible;
-//        }
-//        
-//        
-//    }
 }
 
 .post__title {
     font-family: 'Nanami-Book';
     font-size: 2.5em;
     text-align: center;
-//    max-width: 294px;
-//    margin-right: 0;
-//    margin-left: 0;
-//    @include screen("phone"){
-//        
-//    }
-
     &--decorate {
         @include decorateWord;
-        color:red;
+        color: red;
     }
-    
-   
-    
 }
 
 .post__button {
     background-color: $orange;
-    color:$white;
+    color: $white;
     width: 100px;
     height: 40px;
     margin-bottom: 40px;
@@ -878,26 +828,28 @@ ul {
     position: absolute;
     bottom: 0;
     left: 50%;
-   
-    transform: translate(-50%,-20%);
+    transform: translate(-50%, -20%);
 }
+
+/* section contact */
 
 .contact {
     &__wrapper {
-    background-image: url(../images/bg_cake.jpg);
-    background-size: cover;
-    background-position: center;
-    min-height: 800px;
-    padding: 90px 20px 20px 20px;
-    @include flexPosition(normal,center);
-    flex-direction: column;
-    @include screen("phone"){
-        padding-top: 60px;
-        padding-bottom: 0;
-    }
+        background-image: url(../images/bg_cake.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 800px;
+        padding: 90px 20px 20px 20px;
+        @include flexPosition(normal,
+        center);
+        flex-direction: column;
+        @include screen("phone") {
+            padding-top: 60px;
+            padding-bottom: 0;
+        }
     }
     &__title {
-        @include sectionTitle; 
+        @include sectionTitle;
         color: $white;
         margin-bottom: 50px;
         &--decorate {
@@ -906,13 +858,14 @@ ul {
         }
     }
     &__form {
-        @include flexPosition(space-between,center);
+        @include flexPosition(space-between,
+        center);
         flex-wrap: wrap;
         max-width: 1280px;
         width: 100%;
         text-align: center;
-        }
-    &__input{
+    }
+    &__input {
         font-family: 'Nanami-Book';
         font-size: 1.8em;
         height: 50px;
@@ -924,33 +877,33 @@ ul {
         box-shadow: none;
         outline: none;
         color: #fff;
-        @include screen("tabletAndphone"){
+        @include screen("tabletAndphone") {
             width: 100%;
             margin-top: 0;
         }
     }
-    &__textarea{
+    &__textarea {
         width: 100%;
         font-family: 'Nanami-Book';
         background-color: transparent;
         border: 1px solid #fff;
         height: 255px;
         margin: 0 0 35px;
-         font-size: 1.8em;
-         color: #fff;
+        font-size: 1.8em;
+        color: #fff;
         outline: none;
-         padding: 15px 0 0 20px;
+        padding: 15px 0 0 20px;
     }
     &__button {
-        width:100%;
+        width: 100%;
         background-color: $orange;
         color: white;
         font-weight: bold;
         &:hover {
-            @include buttonHover($white,$orange,$white);
+            @include buttonHover($white,
+            $orange,
+            $white);
         }
-
-    
     }
 }
 
@@ -958,20 +911,24 @@ ul {
     color: white;
 }
 
-.contact-details {
-    @include screen("phone"){
-            padding-bottom: 50px;
-        }
-    @include flexPosition(center,center);
+.contact__contact-details {
+    @include screen("phone") {
+        padding-bottom: 50px;
+    }
+    @include flexPosition(center,
+    center);
     background-color: #fff2ed;
     flex-wrap: wrap;
     text-align: center;
+}
+
+.contact-details {
     &__item {
         margin: 40px 30px;
         background-color: $white;
         height: 275px;
         position: relative;
-        @include screen("phone"){
+        @include screen("phone") {
             margin-bottom: 0;
         }
     }
@@ -985,43 +942,47 @@ ul {
             color: #81868e;
         }
     }
-    &__icon{
-        position: absolute;
+    &__icon {
+        @include absoluteXcenter;
         z-index: 100;
         top: 15%;
-        left: 50%;
-        transform: translate(-50%);
+        
     }
 }
 
-.map {
+.contact__map {
     width: 100%;
     height: 100%;
     position: relative;
-   
+}
+
+.map {
     &__google {
         width: 100%;
         height: 550px;
         filter: brightness(50%);
         &:hover {
             filter: brightness(100%);
-            }
         }
-    
+    }
+
     &__title {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         z-index: 100;
     }
 }
 
+/* footer */
+
 .footer {
-    @include flexPosition(center,center);
+    @include flexPosition(center,
+    center);
     flex-direction: column;
     text-align: center;
-    
+
     padding: 50px 0;
     &__title {
         @include decorateWord;
@@ -1039,13 +1000,3 @@ ul {
     }
 }
 
-
-//@media (max-width:480px){
-//    .carousel__item {
-//      background-image: url('../images/bg_shop_little.jpg');
-//        background-position: center;
-//        background-size: cover;
-//    max-height: 560px;
-//        
-//    }
-//}
