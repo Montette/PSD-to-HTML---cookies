@@ -719,10 +719,10 @@ ul {
     }
     &__title {
         position: absolute;
-        top: 40%;
+        top: 50%;
         left:50%;
         transform: translate(-50%,-50%);
-        font-size: 4.5em;
+        font-size: 5em;
         font-family: "Nanami-Bold";
         text-align: center;
         text-transform: uppercase;
@@ -883,16 +883,18 @@ ul {
 }
 
 .contact {
+    &__wrapper {
     background-image: url(../images/bg_cake.jpg);
     background-size: cover;
     background-position: center;
     min-height: 800px;
-    padding: 70px 20px 20px 20px;
+    padding: 90px 20px 20px 20px;
     @include flexPosition(normal,center);
     flex-direction: column;
     @include screen("phone"){
         padding-top: 60px;
         padding-bottom: 0;
+    }
     }
     &__title {
         @include sectionTitle; 
@@ -909,9 +911,7 @@ ul {
         max-width: 1280px;
         width: 100%;
         text-align: center;
-      
-        
-    }
+        }
     &__input{
         font-family: 'Nanami-Book';
         font-size: 1.8em;
@@ -950,15 +950,15 @@ ul {
             @include buttonHover($white,$orange,$white);
         }
 
+    
     }
-    }
+}
 
 ::placeholder {
     color: white;
 }
 
 .contact-details {
-//    @include centerWrapper(1180px);
     @include screen("phone"){
             padding-bottom: 50px;
         }

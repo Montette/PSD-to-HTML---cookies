@@ -820,10 +820,10 @@ ul {
 
 .gallery__title {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 4.5em;
+  font-size: 5em;
   font-family: "Nanami-Bold";
   text-align: center;
   text-transform: uppercase;
@@ -987,12 +987,12 @@ ul {
   transform: translate(-50%, -20%);
 }
 
-.contact {
+.contact__wrapper {
   background-image: url(../images/bg_cake.jpg);
   background-size: cover;
   background-position: center;
   min-height: 800px;
-  padding: 70px 20px 20px 20px;
+  padding: 90px 20px 20px 20px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: normal;
@@ -1004,7 +1004,7 @@ ul {
 }
 
 @media all and (max-width: 767px) {
-  .contact {
+  .contact__wrapper {
     padding-top: 60px;
     padding-bottom: 0;
   }
