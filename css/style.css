@@ -109,6 +109,17 @@ ul {
   }
 }
 
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
 /* Navigation */
 .nav {
   background-color: #fff;
@@ -396,8 +407,7 @@ ul {
 }
 
 /* Section reservation and menu */
-.reservation,
-.menu {
+.reservation {
   max-width: 1180px;
   margin: 0 auto;
   padding-top: 150px;
@@ -413,14 +423,12 @@ ul {
 }
 
 @media all and (max-width: 767px) {
-  .reservation,
-  .menu {
+  .reservation {
     padding: 100px 0;
   }
 }
 
-.reservation__title,
-.menu__title {
+.reservation__title {
   font-family: "Nanami-Book";
   color: #f01b16;
   font-size: 3.5em;
@@ -429,20 +437,17 @@ ul {
 }
 
 @media all and (max-width: 767px) {
-  .reservation__title,
-  .menu__title {
+  .reservation__title {
     font-size: 3em;
   }
 }
 
-.reservation__title--decorate,
-.menu__title--decorate {
+.reservation__title--decorate {
   font-family: "master_of_break";
   letter-spacing: 1.74px;
 }
 
-.reservation__text,
-.menu__text {
+.reservation__text {
   font-family: "Nanami-Light";
   font-size: 2.2em;
   color: #9f9a97;
@@ -452,27 +457,23 @@ ul {
 }
 
 @media all and (max-width: 767px) {
-  .reservation__text,
-  .menu__text {
+  .reservation__text {
     padding: 30px 20px 40px 20px;
   }
 }
 
 @media all and (min-width: 443px) and (max-width: 767px) {
-  .reservation__text,
-  .menu__text {
+  .reservation__text {
     padding: 30px 35px 35px 20px;
   }
 }
 
-.reservation__button,
-.menu__button {
+.reservation__button {
   color: #fff;
   background-color: #ff7e66;
 }
 
-.reservation__button:hover,
-.menu__button:hover {
+.reservation__button:hover {
   background-color: #fff;
   color: #ff7e66;
   border: 1px solid #ff7e66;
@@ -565,7 +566,7 @@ ul {
   letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 
 @media all and (max-width: 767px) {
@@ -706,7 +707,7 @@ ul {
   }
 }
 
-.icons {
+.features {
   display: -ms-flexbox;
   display: flex;
   display: flex;
@@ -719,32 +720,29 @@ ul {
 }
 
 @media all and (max-width: 767px) {
-  .icons {
+  .features {
     margin-top: 50px;
     margin-bottom: 50px;
   }
 }
 
-.icons__title {
-  font-family: "Nanami-book";
-  font-size: 3em;
-  text-align: center;
-}
-
-.icons__box {
-  padding: 40px 100px;
+.features__item {
+  padding: 50px 100px;
   margin: 0;
+  display: inline-block;
   position: relative;
   text-align: center;
+  font-size: 3em;
+  font-family: "Nanami-Book";
 }
 
 @media all and (max-width: 767px) {
-  .icons__box {
+  .features__item {
     padding: 40px 50px;
   }
 }
 
-.icons__box:nth-child(2)::before, .icons__box:nth-child(3)::before {
+.features__item:nth-child(2)::before, .features__item:nth-child(3)::before {
   content: "";
   position: absolute;
   background-color: black;
@@ -757,9 +755,13 @@ ul {
 }
 
 @media all and (max-width: 1199px) {
-  .icons__box:nth-child(2)::before, .icons__box:nth-child(3)::before {
+  .features__item:nth-child(2)::before, .features__item:nth-child(3)::before {
     display: none;
   }
+}
+
+.features__item .feature__name {
+  margin-top: 15px;
 }
 
 /* section gallery */

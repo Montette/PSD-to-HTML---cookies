@@ -231,6 +231,14 @@ ul {
     }
 }
 
+.visuallyhidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+
 /* Navigation */
 
 .nav {
@@ -458,8 +466,7 @@ ul {
 
 /* Section reservation and menu */
 
-.reservation,
-.menu {
+.reservation {
     @include centerWrapper(1180px);
     padding-top: 150px;
     padding-bottom: 150px;
@@ -534,7 +541,7 @@ ul {
         letter-spacing: 3px;
         text-transform: uppercase;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 45px;
         @include screen("phone") {
             font-size: 3em;
             margin-left: 20px;
@@ -575,7 +582,6 @@ ul {
         @include screen("phone") {
             font-size: 5.5em;
         }
-
     }
     &__text {
         @include textStyle;
@@ -623,7 +629,51 @@ ul {
     }
 }
 
-.icons {
+//.icons {
+//    display: flex;
+//    @include flexPosition(center,
+//    center);
+//    flex-wrap: wrap;
+//    @include screen("phone") {
+//        margin-top: 50px;
+//        margin-bottom: 50px;
+//    }
+//
+//    &__title {
+//        font-family: "Nanami-book";
+//        font-size: 3em;
+//        text-align: center;
+//    }
+//    &__box {
+//        padding: 40px 100px;
+//        margin: 0;
+//        position: relative;
+//        text-align: center;
+//        @include screen("phone") {
+//            padding: 40px 50px;
+//        }
+//        &:nth-child(2)::before,
+//        &:nth-child(3)::before {
+//            @include screen("tabletAndphone") {
+//                display: none;
+//            }
+//            content: "";
+//            position: absolute;
+//            background-color: black;
+//            top: 50%;
+//            left: 0;
+//            transform: translateY(-50%);
+//            height: 100px;
+//            width: 2px;
+//            display: block;
+//
+//        }
+//    }
+//}
+
+
+
+.features {
     display: flex;
     @include flexPosition(center,
     center);
@@ -633,16 +683,14 @@ ul {
         margin-bottom: 50px;
     }
 
-    &__title {
-        font-family: "Nanami-book";
-        font-size: 3em;
-        text-align: center;
-    }
-    &__box {
-        padding: 40px 100px;
+    &__item {
+        padding: 50px 100px;
         margin: 0;
+        display: inline-block;
         position: relative;
         text-align: center;
+        font-size: 3em;
+        font-family: "Nanami-Book";
         @include screen("phone") {
             padding: 40px 50px;
         }
@@ -662,8 +710,13 @@ ul {
             display: block;
 
         }
+        .feature__name {
+            margin-top:15px;
+        }
     }
 }
+
+
 
 /* section gallery */
 
