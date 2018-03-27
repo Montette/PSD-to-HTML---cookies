@@ -282,6 +282,9 @@ ul {
         font-size: 1.8em;
         font-weight: bold;
         text-transform: uppercase;
+        border-bottom: 25px solid transparent;
+        border-right: 3px solid transparent;
+        border-left: 3px solid transparent;
         &:hover {
             background-color: #fff581;
             background-image: linear-gradient(transparent 10px, #fff581 10px);
@@ -628,49 +631,6 @@ ul {
         }
     }
 }
-
-//.icons {
-//    display: flex;
-//    @include flexPosition(center,
-//    center);
-//    flex-wrap: wrap;
-//    @include screen("phone") {
-//        margin-top: 50px;
-//        margin-bottom: 50px;
-//    }
-//
-//    &__title {
-//        font-family: "Nanami-book";
-//        font-size: 3em;
-//        text-align: center;
-//    }
-//    &__box {
-//        padding: 40px 100px;
-//        margin: 0;
-//        position: relative;
-//        text-align: center;
-//        @include screen("phone") {
-//            padding: 40px 50px;
-//        }
-//        &:nth-child(2)::before,
-//        &:nth-child(3)::before {
-//            @include screen("tabletAndphone") {
-//                display: none;
-//            }
-//            content: "";
-//            position: absolute;
-//            background-color: black;
-//            top: 50%;
-//            left: 0;
-//            transform: translateY(-50%);
-//            height: 100px;
-//            width: 2px;
-//            display: block;
-//
-//        }
-//    }
-//}
-
 
 
 .features {

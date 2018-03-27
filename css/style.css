@@ -180,6 +180,9 @@ ul {
   font-size: 1.8em;
   font-weight: bold;
   text-transform: uppercase;
+  border-bottom: 25px solid transparent;
+  border-right: 3px solid transparent;
+  border-left: 3px solid transparent;
 }
 
 .nav__link:hover {
