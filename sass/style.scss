@@ -226,7 +226,6 @@ ul {
     height: 60px;
     border: none;
     padding-top: 22px;
-//    line-height: 1em;
     @include screen("tabletAndphone") {
         font-size: 2em;
     }
@@ -274,6 +273,7 @@ ul {
         letter-spacing: 2px;
         font-size: 1.8em;
         font-weight: bold;
+        text-transform: uppercase;
         &:hover {
             background-color: #fff581;
             background-image: linear-gradient(transparent 10px, #fff581 10px);
@@ -406,12 +406,18 @@ ul {
             background-position: left;
         }
     }
-    &__arrow {
+    &__button{
         position: absolute;
+        background-color: transparent;
+        border: none;
+        outline: none;
         top: 50%;
         transform: translateY(-50%);
         color: $white;
         font-size: 80px;
+        &:focus {
+            outline:none;
+            }
         cursor: pointer;
         &--left {
             left: 4%;
@@ -674,7 +680,6 @@ ul {
         &:hover {
             transform: scale(1.1);
             opacity: .8;
-            cursor: pointer;
         }
 
     }

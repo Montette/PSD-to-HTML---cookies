@@ -10,8 +10,8 @@ $(function () {
     var carouselList = carouselID;
   
 
-    var left = $(".carousel__arrow--left");
-    var right = $(".carousel__arrow--right");   
+    var left = $(".carousel__button--left");
+    var right = $(".carousel__button--right");   
 
     var inter = setInterval(changeSlide, 6000);
 
@@ -68,4 +68,5 @@ $(function () {
             $(".nav__menu").toggleClass("nav__menu--active");
             $(".nav__burger").toggleClass("active");
         })
+ 
 })

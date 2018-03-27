@@ -168,6 +168,7 @@ ul {
   letter-spacing: 2px;
   font-size: 1.8em;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .nav__link:hover {
@@ -323,8 +324,11 @@ ul {
   background-position: left;
 }
 
-.carousel__arrow {
+.carousel__button {
   position: absolute;
+  background-color: transparent;
+  border: none;
+  outline: none;
   top: 50%;
   transform: translateY(-50%);
   color: #fff;
@@ -332,11 +336,15 @@ ul {
   cursor: pointer;
 }
 
-.carousel__arrow--left {
+.carousel__button:focus {
+  outline: none;
+}
+
+.carousel__button--left {
   left: 4%;
 }
 
-.carousel__arrow--right {
+.carousel__button--right {
   right: 4%;
 }
 
@@ -775,7 +783,6 @@ ul {
 .gallery__img:hover {
   transform: scale(1.1);
   opacity: .8;
-  cursor: pointer;
 }
 
 .gallery__small-elem {
