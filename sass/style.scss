@@ -225,6 +225,8 @@ ul {
     width: 245px;
     height: 60px;
     border: none;
+    padding-top: 22px;
+//    line-height: 1em;
     @include screen("tabletAndphone") {
         font-size: 2em;
     }
@@ -592,6 +594,7 @@ ul {
         height: 60px;
         margin-top: 40px;
         margin-bottom: 40px;
+        padding-top: 19px;
         &:hover {
             @include buttonHover($white,
             #dac572,
@@ -824,6 +827,7 @@ ul {
     width: 100px;
     height: 40px;
     margin-bottom: 40px;
+    padding-top: 13px;
     visibility: hidden;
     position: absolute;
     bottom: 0;
@@ -896,6 +900,7 @@ ul {
     }
     &__button {
         width: 100%;
+        padding-top: 0;
         background-color: $orange;
         color: white;
         font-weight: bold;
