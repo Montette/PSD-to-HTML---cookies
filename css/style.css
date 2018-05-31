@@ -831,6 +831,15 @@ ul {
   }
 }
 
+.gallery__small-elem--orange {
+  background-color: #fff4ef;
+}
+
+.gallery__small-elem--first {
+  -ms-flex-order: -1;
+      order: -1;
+}
+
 .gallery__big-elem {
   width: 50%;
   margin: 0;
