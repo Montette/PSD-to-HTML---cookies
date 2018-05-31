@@ -723,8 +723,6 @@ ul {
         }
         &--orange {
             background-color: #fff4ef;
-            
-           
         }
         &--first {
             order:-1;
@@ -846,10 +844,11 @@ ul {
     font-family: 'Nanami-Book';
     font-size: 2.5em;
     text-align: center;
-    &--decorate {
-        @include decorateWord;
-        color: red;
-    }
+}
+
+.post__title-decoration {
+    @include decorateWord;
+    color: red;
 }
 
 .post__button {
