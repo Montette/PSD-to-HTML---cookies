@@ -642,7 +642,13 @@ ul {
         margin-top: 50px;
         margin-bottom: 50px;
     }
-
+    &__list {
+        @include screen("tabletAndphone") {
+            @include flexPosition(center,
+            center);
+            flex-wrap: wrap;
+        }
+    }
     &__item {
         padding: 50px 100px;
         margin: 0;
@@ -1022,4 +1028,6 @@ ul {
         margin: 0 10px;
     }
 }
+
+
 
